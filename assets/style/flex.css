@@ -1,3 +1,4 @@
+/* Cabecalho */
 .menu {
     display: flex;
     justify-content: space-evenly;
@@ -6,13 +7,63 @@
     column-gap: 2rem;
 }
 
+/* Categorias */
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+/* Destaques */
+.destaques {
+    display: flex;
+    align-items: center;
+    column-gap: 0.625rem;
+}
+
+.destaques__barra {
+    flex-grow: 1;
+}
+
+.destaques__setas {
+    white-space: nowrap;
+}
+
+/* Eventos */
+.eventos__lista,
+.agenda__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+}
+
+.eventos__item,
+.agenda__item {
+    flex-grow: 1;
+    max-width: 400px;
+}
 @media (min-width: 720px) {
+    /* Cabecalho */
     .menu {
         column-gap: 4.68rem;
     }
+    /* Categorias */
+    .categorias__lista {
+        flex-wrap: wrap;
+        column-gap: 1.5rem;
+        row-gap: 1rem;
+    }
+
+    /* Eventos e Agenda */
+    .eventos__lista,
+    .agenda__lista {
+        justify-content: end;
+    }
+
 }
 
 @media (min-width: 1440px) {
+    /* Cabecalho */
     .menu {
         column-gap: 6.5rem;
         flex-wrap: nowrap;
